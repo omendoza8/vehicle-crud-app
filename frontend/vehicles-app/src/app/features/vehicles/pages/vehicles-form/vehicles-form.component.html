@@ -1,0 +1,32 @@
+<mat-card>
+  <h2>{{ isEditMode ? 'Edit Vehicle' : 'Add Vehicle' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Brand</mat-label>
+      <input matInput formControlName="brand" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Model</mat-label>
+      <input matInput formControlName="model" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Year</mat-label>
+      <input matInput type="number" formControlName="year" required min="1900" max="2100">
+    </mat-form-field>
+    
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Plate</mat-label>
+      <input matInput formControlName="licensePlateNumber" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+      {{ isEditMode ? 'Update' : 'Create' }}
+    </button>
+
+    <button mat-button color="warn" routerLink="/">Cancel</button>
+  </form>
+</mat-card>

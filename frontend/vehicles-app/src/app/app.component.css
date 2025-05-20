@@ -1,0 +1,27 @@
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.main-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+a.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  color: #fff;
+}
